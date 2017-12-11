@@ -1,5 +1,5 @@
 #install.packages("Mass")
-library("Mass")
+library("MASS")
 
 data("Boston")
 
@@ -25,6 +25,7 @@ Boston_test_labels <- Boston[355:506, 1]
 
 #install.packages("caret")
 library(caret)
+library(class)
 
 k_results <- data.frame(k=numeric(0),accuracy=numeric(0),precision=numeric(0),sensitivity=numeric(0),specificity=numeric(0))
 for(i in 1:10){
