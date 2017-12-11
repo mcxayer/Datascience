@@ -18,11 +18,6 @@ for(i in  1:nrow(Boston)) {
   }
 }
 
-Boston_train <- Boston_n[1:354,]
-Boston_test <- Boston_n[355:506,]
-Boston_train_labels <- Boston[1:354, 1]
-Boston_test_labels <- Boston[355:506, 1]
-
 #install.packages("caret")
 library(caret)
 library(class)
@@ -35,7 +30,7 @@ for(n in 1:length(folds)) {
   classes_validation <- as.data.frame(lapply(folds[n], function(ind, dat) dat[ind], dat = Boston$crim))[,1]
   k_results <- data.frame(k=numeric(0),accuracy=numeric(0),precision=numeric(0),sensitivity=numeric(0),specificity=numeric(0))
   for(i in 1:10){
-      test_results = knn(train = train_data, test = validation_data,cl = classes_train, k=i)
+    test_results = knn(train = train_data, test = validation_data,cl = classes_train, k=i)
     confusion_matrix = confusionMatrix(test_results,classes_validation,positive="below")
     k_results[i,1] = i
     k_results[i,2] = confusion_matrix$overall["Accuracy"]
@@ -43,6 +38,6 @@ for(n in 1:length(folds)) {
     k_results[i,4] = confusion_matrix$byClass["Sensitivity"]
     k_results[i,5] = confusion_matrix$byClass["Specificity"]
   }
-  cat(paste("\nFold\t ", n, "\nError\t ", 1 - max(k_results$accuracy),"\nAccuracy ",max(k_results$accuracy),"\n--------"))
+  cat(paste("\nFold\t ", n, "\nk\t ", which(k_results$accuracy == max(k_results$accuracy))[1], "\nError\t ", 1 - max(k_results$accuracy)[1],"\nAccuracy ",max(k_results$accuracy)[1],"\n--------"))
   
 }
