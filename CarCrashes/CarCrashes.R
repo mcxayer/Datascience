@@ -60,7 +60,6 @@ Data_Car_accidents_17 <- read_excel("~/Documents/DataScience/Assignment/Data_Car
 
 score <- predict(multinomModelCon, newdata=Data_Car_accidents_17)
 actual <- Data_Car_accidents_17$Accident
-accuracy(actual,score,threshold=0.5)
 
 library("caret", lib.loc="/Library/Frameworks/R.framework/Versions/3.4/Resources/library")
 confusionMatrix(score, actual)
