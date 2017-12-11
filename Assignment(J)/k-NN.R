@@ -3,10 +3,11 @@ library("MASS")
 
 data("Boston")
 
+set.seed(1234)
 
 normalize <- function(x) {
   return ((x - min(x)) / (max(x) - min(x))) }
-Boston_n <- as.data.frame(lapply(Boston[2:10], normalize))
+Boston_n <- as.data.frame(lapply(Boston[2:14], normalize))
 
 
 median_value = median(Boston[,1])
@@ -49,7 +50,7 @@ print(paste("k=",which(k_results$specificity == max(k_results$specificity)), "("
 
 accurate_k = which(k_results$accuracy == max(k_results$accuracy))
 
-for(n in 1:7) {
+for(n in 1:11) {
   k_results <- data.frame(k=numeric(0),accuracy=numeric(0),precision=numeric(0),sensitivity=numeric(0),specificity=numeric(0))
   for(i in 1:ncol(Boston_train)){
     train_data = Boston_train[,-i]
