@@ -54,6 +54,7 @@ qplot(BloodAlcoholLevel, Socioeconomic_status, data=dataSimple, color = "Red")
 # Question 6
 
 install.packages("forecast")
+library("forecast")
 library("lda")
 
 Data_Car_accidents_17 <- read_excel("~/Documents/DataScience/Assignment/Data_Car_accidents.xlsx", sheet = "Data_17_subjects")
