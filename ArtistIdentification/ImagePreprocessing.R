@@ -9,16 +9,19 @@ biocLite("EBImage")
 library("EBImage")
 #require(EBImage)
 
-# Set wd where images are located
-setwd("/Users/maria/Documents/GitHub/Datascience/ArtistIdentification/images")
+# At the moment we run this 4 times, once for each artist and change the name by hand in the following paths
+
+# NOTE: path for Maria's MacBookPro
+setwd("/Users/maria/Documents/GitHub/Datascience/ArtistIdentification/images/Renior")
+
 # Set d where to save images
-save_in <- "/Users/maria/Documents/GitHub/Datascience/ArtistIdentification/images_resized"
+save_in <- "../Renior_resized" # for some reason it isn't saving the images in the resized folder but in images instead - will have to be fixed
 # Load images names
 images <- list.files()
 # Set width
-w <- 28
+w <- 64
 # Set height
-h <- 28
+h <- 64
 
 # Main loop resize images and set them to greyscale
 for(i in 1:length(images))
