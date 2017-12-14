@@ -17,11 +17,12 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(32, (3, 3)))
 model.add(Activation("relu"))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
 model.add(Flatten())
+
 model.add(Dense(32))
 model.add(Activation("relu"))
 model.add(Dropout(0.5))
+
 model.add(Dense(4))
 model.add(Activation("softmax"))
 
@@ -31,9 +32,9 @@ model.compile(loss="categorical_crossentropy",
 
 train_image_data_generator = ImageDataGenerator(
     rescale=1. / 255,
+    rotation_range=45,
     shear_range=0.2,
-    zoom_range=0.2,
-    horizontal_flip=True
+    zoom_range=0.2
 )
 
 train_image_data_flow = train_image_data_generator.flow_from_directory(

@@ -8,7 +8,7 @@ from keras.preprocessing.image import load_img
 
 
 def visualize_image(image_batch):
-    image = np.squeeze(image_batch, axis=0)
+    image = image_batch.reshape(image_batch.shape[2:4])
     plt.imshow(image)
 
 
@@ -18,6 +18,7 @@ batch_size = 16
 image = load_img('./Images/Test/Unknown/image3.png', target_size=(dimensions[0], dimensions[1]))
 image_array = img_to_array(image)
 image_array = image_array.reshape((1,) + image_array.shape)
+#image_array = np.expand_dims(image, axis=0)
 
 model = Sequential()
 model.add(Conv2D(32, 3, input_shape=(dimensions[0], dimensions[1], dimensions[2]), data_format="channels_last"))

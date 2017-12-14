@@ -1,5 +1,5 @@
 
-# Question 1
+# Task 1
 
 library(readxl)
 Data_Car_accidents <- read_excel("~/Documents/DataScience/Assignment/Data_Car_accidents.xlsx", sheet = "Data_196_subjects")
@@ -20,7 +20,7 @@ populationByAccident <- CreateTableOne(listVar, Data_Car_accidents, catVars, str
 populationByAccident
 
 
-# Question 2
+# Task 2
 
 library("nnet")
 
@@ -37,21 +37,7 @@ multinomModelCon <- multinom(Accident ~ ., data=dataCon)
 summary(multinomModelCon)
 
 
-# Question 4
-# https://blogs.uoregon.edu/rclub/2016/04/05/plotting-your-logistic-regression-models/
-# https://www.google.dk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwi5r6Cy6oHYAhVLzqQKHb02CnAQFggpMAA&url=https%3A%2F%2Fwww.jstatsoft.org%2Farticle%2Fview%2Fv032i01%2Fv32i01.pdf&usg=AOvVaw1P6gTDO77we38_vB43kr3f
-
-variables <- c("Accident", "BloodAlcoholLevel")
-
-install.packages("ggplot2")
-library("ggplot2", lib.loc="/Library/Frameworks/R.framework/Versions/3.4/Resources/library")
-
-ggplot(aes(x=dataSimple$Accident,y=dataSimple$BloodAlcoholLevel))+geom_point()
-
-qplot(BloodAlcoholLevel, Socioeconomic_status, data=dataSimple, color = "Red")
-
-
-# Question 6
+# Task 6
 
 install.packages("forecast")
 library("forecast")

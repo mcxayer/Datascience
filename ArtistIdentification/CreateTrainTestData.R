@@ -1,10 +1,5 @@
-# source: https://www.r-bloggers.com/image-recognition-tutorial-in-r-using-deep-convolutional-neural-networks-mxnet-package/
-
-# Clean environment and load required packages
 rm(list=ls())
 require(EBImage)
-
-
 
 writeOutImagesInExcel <- function(images, out_file, label) {
   df <- data.frame()
@@ -13,15 +8,10 @@ writeOutImagesInExcel <- function(images, out_file, label) {
   for(i in 1:length(images))
   {
     img <- readImage(images[i])
-    # Get the image as a matrix
     img_matrix <- img@.Data
-    # Coerce to a vector
     img_vector <- as.vector(t(img_matrix))
-    # Add label
     vec <- c(label, img_vector)
-    # Bind rows
     df <- rbind(df,vec)
-    # Print status info
     print(paste("Done ", i, sep = ""))
   }
   
@@ -54,13 +44,9 @@ label_renior <- 3
 images_renior <- list.files()
 writeOutImagesInExcel(images_renior, out_file_renior, label_renior)
 
-
-
-
 #-------------------------------------------------------------------------------
 # Test and train split and shuffle
 
-# Load datasets
 setwd("/Users/maria/Documents/GitHub/Datascience/ArtistIdentification/images")
 degas <- read.csv("degas_64.csv") # 121 samples
 manet <- read.csv("manet_64.csv") # 121 samples

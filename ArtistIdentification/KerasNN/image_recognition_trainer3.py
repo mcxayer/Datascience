@@ -58,9 +58,9 @@ validation_image_data_flow = validation_image_data_generator.flow_from_directory
     class_mode="categorical"
 )
 
-sample_amount = 120
-validation_sample_amount = 42
-epochs = 500
+sample_amount = 120*20
+validation_sample_amount = 42*20
+epochs = 50
 epoch_steps = sample_amount // batch_size
 validation_steps = validation_sample_amount // batch_size
 
@@ -74,4 +74,4 @@ history = model.fit_generator(
 
 print(history.history)
 
-model.save("cnn_model_v2_500epoch.h5")
+model.save("cnn_model_v3_50epoch.h5")
