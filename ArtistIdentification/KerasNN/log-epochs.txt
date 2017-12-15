@@ -1,0 +1,53 @@
+Network 1:
+loss: 1.1090 - acc: 0.5458 - val_loss: 0.9233 - val_acc: 0.6300
+loss: 0.8896 - acc: 0.6467 - val_loss: 0.7616 - val_acc: 0.6925
+loss: 0.7570 - acc: 0.7244 - val_loss: 0.6746 - val_acc: 0.7629
+loss: 0.8059 - acc: 0.7058 - val_loss: 0.6872 - val_acc: 0.7470
+
+Network 2:
+loss: 1.0751 - acc: 0.5643 - val_loss: 0.9507 - val_acc: 0.6220
+loss: 0.7553 - acc: 0.7271 - val_loss: 0.8090 - val_acc: 0.6806
+loss: 0.6051 - acc: 0.7827 - val_loss: 0.7785 - val_acc: 0.7183
+loss: 0.6709 - acc: 0.7682 - val_loss: 0.9047 - val_acc: 0.7341
+
+Network 3:
+loss: 1.0458 - acc: 0.5817 - val_loss: 0.9012 - val_acc: 0.6349
+loss: 0.7223 - acc: 0.7249 - val_loss: 0.7381 - val_acc: 0.7143
+loss: 0.4130 - acc: 0.8578 - val_loss: 1.1734 - val_acc: 0.6647
+loss: 0.4595 - acc: 0.8755 - val_loss: 1.3968 - val_acc: 0.7083
+
+Network 4:
+loss: 1.1213 - acc: 0.5277 - val_loss: 0.9748 - val_acc: 0.6121
+loss: 0.8370 - acc: 0.6858 - val_loss: 0.8421 - val_acc: 0.6617
+loss: 0.5790 - acc: 0.7830 - val_loss: 0.8509 - val_acc: 0.7202
+loss: 0.4425 - acc: 0.8378 - val_loss: 0.9704 - val_acc: 0.7599
+
+Network 5:
+loss: 1.0198 - acc: 0.5707 - val_loss: 0.9255 - val_acc: 0.6458
+loss: 0.6741 - acc: 0.7478 - val_loss: 0.7471 - val_acc: 0.7123
+loss: 0.4273 - acc: 0.8371 - val_loss: 1.0154 - val_acc: 0.6736
+loss: 0.3091 - acc: 0.9001 - val_loss: 1.2910 - val_acc: 0.7163
+
+Network 6:
+loss: 1.0784 - acc: 0.5600 - val_loss: 0.9730 - val_acc: 0.6081
+loss: 0.8672 - acc: 0.6603 - val_loss: 0.9920 - val_acc: 0.6558
+loss: 0.8331 - acc: 0.6786 - val_loss: 0.7906 - val_acc: 0.6885
+loss: 0.8419 - acc: 0.6856 - val_loss: 0.7097 - val_acc: 0.7202
+
+Network 7:
+loss: 1.0796 - acc: 0.5576 - val_loss: 0.9415 - val_acc: 0.6220
+loss: 0.7670 - acc: 0.7081 - val_loss: 0.7121 - val_acc: 0.7242
+loss: 0.5380 - acc: 0.8136 - val_loss: 0.8532 - val_acc: 0.7232
+loss: 0.4913 - acc: 0.8356 - val_loss: 1.3985 - val_acc: 0.6657
+
+Network 8:
+loss: 1.0588 - acc: 0.5689 - val_loss: 0.9769 - val_acc: 0.6071
+loss: 0.7087 - acc: 0.7397 - val_loss: 0.8704 - val_acc: 0.6508
+loss: 0.2195 - acc: 0.9290 - val_loss: 1.3708 - val_acc: 0.6845
+loss: 0.1650 - acc: 0.9641 - val_loss: 2.6590 - val_acc: 0.6300
+
+Network 9:
+loss: 1.0548 - acc: 0.5817 - val_loss: 0.9322 - val_acc: 0.6181
+loss: 0.7113 - acc: 0.7349 - val_loss: 0.7421 - val_acc: 0.7232
+loss: 0.2440 - acc: 0.9168 - val_loss: 1.3298 - val_acc: 0.7024
+loss: 0.1209 - acc: 0.9613 - val_loss: 1.8327 - val_acc: 0.6062
