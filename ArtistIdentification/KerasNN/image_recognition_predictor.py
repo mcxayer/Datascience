@@ -4,7 +4,7 @@ from keras.preprocessing.image import load_img, img_to_array, ImageDataGenerator
 
 dimensions = [64, 64, 3]
 
-model = load_model("cnn_model_v13_50epoch.h5")
+model = load_model("cnn_model_v6_50epoch.h5")
 
 # Manual testing
 def test(path):

@@ -5,7 +5,7 @@ from keras.layers import Conv2D, Activation, MaxPooling2D, Flatten, Dense, Dropo
 from keras.preprocessing.image import ImageDataGenerator
 
 dimensions = [64, 64, 3]
-batch_size = 16
+batch_size = 32
 
 model = Sequential()
 model.add(Conv2D(32, 3, input_shape=(dimensions[0], dimensions[1], dimensions[2]),
@@ -57,7 +57,7 @@ validation_image_data_flow = validation_image_data_generator.flow_from_directory
     class_mode="categorical"
 )
 
-sample_amount = 1.361 + 1322 + 116 + 600
+sample_amount = 3399
 validation_sample_amount = 1021
 epochs = 50
 epoch_steps = sample_amount // batch_size
